@@ -25,7 +25,16 @@ let state = {};
 // console.log('Zip Code:', state.zipCode);
 
 // TODO: Now, you try updating the `state` object with your own values for `name`, `email`, and `zipCode`!
+state.name = `Briana Ross`;
+state.email = `brianaar.99@gmail.com`;
+state.zipcode = `27612`;
 
+console.log(`State:`, state);
+console.table(state);
+
+console.log(`Name:`,state.name);
+console.log(`Email:`,state.email);
+console.log(`Zip Code:`, state.zipcode);
 
 // EXERCISE 2: Adding More Personal Information
 // INSTRUCTIONS: Add properties `age`, `phoneNumber`, and `address` to the `state` object and assign them appropriate values.
@@ -45,7 +54,7 @@ let state = {};
 // console.log('Address:', state.address);
 
 // TODO: Now, you try updating the `state` object with your own values for `age`, `phoneNumber`, and `address`!
-
+   state.age = 25; 
 
 // EXERCISE 3: Creating a List of Favorite Movies
 // INSTRUCTIONS: Add a property `favoriteMovies` to the `state` object that is an array of strings representing movie titles.
