@@ -54,7 +54,16 @@ console.log(`Zip Code:`, state.zipcode);
 // console.log('Address:', state.address);
 
 // TODO: Now, you try updating the `state` object with your own values for `age`, `phoneNumber`, and `address`!
-   state.age = 25; 
+   state.age = 25;
+   state.phoneNumber = `123-4567`;
+   state.address = `456 Granite Ridge Ln, Malibu`;
+   
+   console.log(`State:`, state);
+   console.table(state);
+
+   console.log(`Age:`,state.age);
+   console.log(`Phone Number:`, state.phoneNumber);
+   console.log(`Address:`, state.address);
 
 // EXERCISE 3: Creating a List of Favorite Movies
 // INSTRUCTIONS: Add a property `favoriteMovies` to the `state` object that is an array of strings representing movie titles.
@@ -72,8 +81,14 @@ console.log(`Zip Code:`, state.zipcode);
 // }
 
 // TODO: Now, you try creating your own list of favorite movies and logging them to the console!
-
-
+   state.favoriteMovies = [`Freedom Writers`, `Matilda`, `The Boss`]; 
+   
+   console.log(`State:`, state);
+   console.table(state.favoriteMovies);
+   
+   for (let i = 0; i < state.favoriteMovies.length; i++) {
+    console.log(`Movie ${i + 1}:`, state.favoriteMovies[i]);
+   }
 // EXERCISE 4: Creating a List of Recent Purchases
 // INSTRUCTIONS: Add a property `recentPurchases` to the `state` object that is an array of numbers representing purchase amounts.
 // Use `console.log` to log the entire `state` object, and use `console.table` to log the `recentPurchases` array.
@@ -90,7 +105,14 @@ console.log(`Zip Code:`, state.zipcode);
 // }
 
 // TODO: Now, you try creating your own list of recent purchases and logging them to the console!
+   state.recentPurchases = [50.00, 300.00, 20.00, 10.00];
 
+   console.log(`State:`, state);
+   console.table(state.recentPurchases);
+
+   for (let i = 0; i < state.recentPurchases.length; i++) {
+    console.log(` ${i + 1}:`, state.recentPurchases[i]);
+   }
 
 // EXERCISE 5: Adding Hobbies and Interests
 // INSTRUCTIONS: Add a property `hobbies` to the `state` object that is an array of strings representing different hobbies or interests.
@@ -108,7 +130,14 @@ console.log(`Zip Code:`, state.zipcode);
 // }
 
 // TODO: Now, you try adding your own hobbies to the `state` object and logging them to the console!
+   state.hobbies = [`Cooking`, `Painting`, `All things Beauty`];
 
+   console.log(`State:`,state);
+   console.table(state.hobbies);
+
+   for (let i = 0; i < state.hobbies.length; i++) {
+    console.log(`Hobby ${i + 1}:`, state.hobbies[i]);
+   }
 
 // Excellent work! You've completed the exercises.
 // Keep experimenting with the `state` object by adding more properties and interacting with them using logs and tables.
