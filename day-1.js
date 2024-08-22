@@ -73,9 +73,9 @@ function createTask(description, dueDate) {
 
 // TODO: Now, you try building your own task list and marking each task as completed!
 const taskList = [];
-createTask.push(createTask('Morning Walk', '2024-08-21'));
-createTask.push(createTask('Grocery shopping', '2024-08-21'));
-createTask.push(createTask('Go to Car Lot', '2024-09-03'));
+taskList.push(createTask('Morning Walk', '2024-08-21'));
+taskList.push(createTask('Grocery shopping', '2024-08-21'));
+taskList.push(createTask('Go to Car Lot', '2024-09-03'));
 
 for (let i = 0; i < taskList.length; i++) {
      taskList[i].completeTask();
