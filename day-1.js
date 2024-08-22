@@ -47,7 +47,14 @@ function createTask(description, dueDate) {
 // }
 
 // TODO: Now, you try building your own book collection with different books!
-
+   const bookCollection = []
+   bookCollection.push(createBook(`Teenie`, `Christopher Grant`));
+   bookCollection.push(createBook(`How to Change the Way You Think`, `Amy Sharp`));
+   bookCollection.push(createBook(`Grimms' Fairy Tales`,`Brothers Grimm`));
+   
+   for (let i = 0; i < bookCollection.length; i++) {
+    bookCollection[i].showDetails();
+   }
 
 // EXERCISE 2: Managing a Task List
 // INSTRUCTIONS: Create an empty array called `taskList`.
@@ -65,7 +72,14 @@ function createTask(description, dueDate) {
 // }
 
 // TODO: Now, you try building your own task list and marking each task as completed!
+const taskList = [];
+taskList.push(createTask('Morning Walk', '2024-08-21'));
+taskList.push(createTask('Grocery shopping', '2024-08-21'));
+taskList.push(createTask('Go to Car Lot', '2024-09-30'));
 
+for (let i = 0; i < taskList.length; i++) {
+     taskList[i].completeTask();
+}
 
 // EXERCISE 3: Updating Book Titles
 // INSTRUCTIONS: Create an empty array called `library`.
