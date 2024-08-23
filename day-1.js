@@ -98,8 +98,15 @@ for (let i = 0; i < taskList.length; i++) {
 // }
 
 // TODO: Now, you try updating the titles of your own library!
+const library = [];
+library.push(createBook('The Great Gatsby', 'F. Scott Fitzgerald'));
+library.push(createBook('Brave New World', 'Aldous Huxley'));
+library.push(createBook('Moby Dick', 'Herman Melville'));
 
-
+ for (let i = 0; i < library.length; i++) {
+     library[i].title += ' - Second Edition';
+     library[i].showDetails();  
+ }
 // EXERCISE 4: Rescheduling Tasks
 // INSTRUCTIONS: Create an empty array called `taskList`.
 // Use the `push` method to add 3 tasks to the array using the `createTask` factory function.
@@ -119,7 +126,17 @@ for (let i = 0; i < taskList.length; i++) {
 // }
 
 // TODO: Now, you try rescheduling your own tasks!
+const taskList1 = [];
+ taskList1.push(createTask('Finish project', '2024-09-10'));
+ taskList1.push(createTask('Visit the dentist', '2024-09-11'));
+ taskList1.push(createTask('Submit assignment', '2024-09-12'));
 
+ for (let i = 0; i < taskList.length; i++) {
+     let oldDate = new Date(taskList[i].dueDate);
+     let newDate = new Date(oldDate.setDate(oldDate.getDate() + 1));
+     taskList[i].dueDate = newDate.toISOString().split('T')[0];
+     console.log(`New due date for "${taskList[i].description}": ${taskList[i].dueDate}`);
+ }
 
 // EXERCISE 5: Counting Completed Tasks
 // INSTRUCTIONS: Create an empty array called `taskList`.
@@ -145,7 +162,21 @@ for (let i = 0; i < taskList.length; i++) {
 // console.log(`Number of completed tasks: ${completedCount}`);
 
 // TODO: Now, you try counting the completed tasks in your own task list!
+ const taskList2 = [];
+ taskList2.push(createTask('Clean the house', '2024-09-15'));
+ taskList2.push(createTask('Pay electricity bill', '2024-09-16'));
+ taskList2.push(createTask('Prepare presentation', '2024-09-17'));
 
+ taskList2[0].completeTask(); 
+ taskList2[2].completeTask(); 
+
+ let completedCount = 0;
+ for (let i = 0; i < taskList2.length; i++) {
+     if (taskList2[i].completed) {
+         completedCount++;
+     }
+ }
+ console.log(`Number of completed tasks: ${completedCount}`);
 
 // Great job! You've completed the exercises.
 // Feel free to experiment further with the factory functions and loops to create more complex arrays and interactions.
